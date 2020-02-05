@@ -1,0 +1,2 @@
+# Fastest Typer
+ Typing Game
