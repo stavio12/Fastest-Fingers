@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+ <div class="d-flex justify-content-center"  id="level">Select Difficulty <select value="level">
+     <option name="beginner" id="easy">Beginner</option>
+     <option name="intermediate" id="medium">Intermediate</option>
+     <option name="expert" id="hard">Expert</option>
+ </select></div>
+
+ <div id="game" class="container">
+         <div  class="d-flex justify-content-center" id="header">
+            <img class="img-fluid.max-width: 100%; float-left" src="typing.gif" alt="typing">
+                   Fastest Typer Game
+            <img class="rounded float-right" src="ladytyping.gif" alt="typing">
+         </div>
+
+     <div id="tscore" >
+         <h2 class="float-sm-left" id="time">
+         </h2>
+         <h2 class="float-sm-right" id="score">
+        </h2>
+     </div>
+
+        <div id="words" class="d-flex justify-content">
+            <button id="startbtn" class="btn btn-outline-success">Start</button>
+            <div>
+            <h5 >Type The following:</h5>
+            <h1>Love</h1>
+            <input type="text" id="ans" placeholder="Type the word here......" style="width: 20em; margin-left: -5em;">
+        </div>
+            
+        </div>
+
+
+    <div id="start"  class="d-flex justify-content">
+        <div>
+            <h1>Time run out</h1> <br>
+        <h5>Your final score is <span id="result">20</span></h5> 
+        <button id="reload" class="btn btn-outline-primary">Reload</button>
+        </div>
+        
+    </div>
+
+ </div>
+</body>
+<script src="app.js"></script>
+</html>
