@@ -79,7 +79,7 @@ function tScore(){
 }
 
 function updatescore(){
-  score
+  score++
  newScore.innerHTML = `Score: ${score}`;
 }
 
