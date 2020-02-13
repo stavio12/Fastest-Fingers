@@ -11,8 +11,8 @@ body{
 #game{
     position: relative;
 width: 60vw;
-height: 50vh;
-top: 10em;
+height: 40vw;
+top: 5em;
 border: .2em solid whitesmoke;
 color: whitesmoke;
 
@@ -28,18 +28,11 @@ background: radial-gradient( circle 879px at 10.4% 22.3%,  rgba(255,235,238,1) 0
     width: 15%;
 }
 
-#tscore{
 
-}
 
 #words {
     padding: 8em;
     justify-content: center;
-}
-
-#startbtn{
-    /* display: block;  */
-    
 }
 
 
@@ -48,16 +41,18 @@ background: radial-gradient( circle 879px at 10.4% 22.3%,  rgba(255,235,238,1) 0
     justify-content: center;
 }
 
+
 #words button, #start button{
 width: 10em;
 height: 3em;
 
 }
 
-#words div, #start div{
+#words div{
     display: none; 
-
-
+   margin-left: 0em;
 }
 
-
+#result, #reload{
+margin-left: 1.5em;
+}

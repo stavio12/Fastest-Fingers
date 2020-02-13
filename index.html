@@ -10,11 +10,14 @@
     <title>Document</title>
 </head>
 <body>
- <div class="d-flex justify-content-center"  id="level">Select Difficulty <select value="level">
-     <option name="beginner" id="easy" value="Beginner">Beginner</option>
-     <option name="intermediate" id="medium">Intermediate</option>
-     <option name="expert" id="hard">Expert</option>
- </select></div>
+    <form action="#">
+        <div class="d-flex justify-content-center"  id="level">Select Difficulty <select value="level">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Expert">Expert</option>
+        </select></div>
+    </form>
+
 
  <div id="game" class="container">
          <div  class="d-flex justify-content-center" id="header">
@@ -33,20 +36,16 @@
         <div id="words" class="d-flex justify-content">
             <button id="startbtn" class="btn btn-outline-success">Start</button>
             <div>
-            <h5 >Type The following:</h5>
-            <h1 id="display">Love</h1>
-            <input type="text" id="ans" placeholder="Type the word here......" style="width: 20em; margin-left: -5em;">
+            <h5 style="margin-left: 2em;" >Type The following:</h5>
+            <h1 style="margin-left: 1em;" id="display"></h1>
+            <input type="text" id="text" placeholder="Type the word here......" style="width: 25em; margin-left: -5em;">
         </div>
             
         </div>
 
 
     <div id="start"  class="d-flex justify-content">
-        <div>
-            <h1>Time run out</h1> <br>
-        <h5>Your final score is <span id="result">20</span></h5> 
-        <button id="reload" class="btn btn-outline-primary">Reload</button>
-        </div>
+        
         
     </div>
 
