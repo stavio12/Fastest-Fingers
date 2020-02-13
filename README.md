@@ -1,3 +1,4 @@
+# https://stavio12.github.io/Fastest-Typer/.
 # How fast can you type?
 # Fastest Typer
 # 90% done
