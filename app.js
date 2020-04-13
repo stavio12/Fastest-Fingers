@@ -13,11 +13,18 @@ const newScore = document.querySelector('#score');
 eventListener();
 
 function eventListener (){
+  document.addEventListener('DOMContentLoaded', appInit)    
     startBtn.addEventListener('click', disappear);
-    
     text.addEventListener('input', answers);
 
   }
+
+//disabling game onload
+
+function appInit(){
+  document.querySelector('#startbtn').disabled= true
+}
+
 
 //initing time word and score 
 let randomWord;
@@ -156,6 +163,9 @@ if( insertedText === randomWord){
 }
 
 document.querySelector('form').addEventListener("change", e => {
+if(e.target.value !== ''){
+  document.querySelector('#startbtn').disabled= false;
+}
 
   difficulty = e.target.value;
   localStorage.setItem('difficulty', difficulty);
