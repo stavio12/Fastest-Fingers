@@ -18,15 +18,9 @@ body{
 }
 
 
-    #game{
-position: relative;
-left: 5.5em;
-width: 70vw;
-height: 55vh;
-margin-top: 5em;
-border: .2em solid whitesmoke;
-color: whitesmoke;
-}
+    /* #game{
+
+} */
 
 #box{
     display: none;
@@ -45,17 +39,19 @@ color: whitesmoke;
    
  <div class="container">
      
- <form action="#" id="level">
-        <div class="text-center level" >Select Difficulty 
-            <select value="level">
-            <option value="Beginner">Beginner</option>
+ <form action="#" >
+        <div class="text-center level" id="level">Select Difficulty 
+            <select>
+               <option value="Beginner">Beginner</option>
             <option value="Intermediate">Intermediate</option>
             <option value="Expert">Expert</option>
         </select>
     </div>    
     </form>
+<div class="row">
 
-<div id="game" class="ml-2">
+    <div class="col-12 col-md-10 ml-auto border border-info mt-5">
+<div id="game"> 
  <div  class="row text-center p-2">
   
          <div class="p-2 col-12 col-sm-6 col-md-6" id="header">
@@ -66,7 +62,7 @@ color: whitesmoke;
          </div>
  </div>
 
- <h2 class="text-center">Fastest Fingers Game</h2>
+ <h2 class="text-center">Fastest Fingers </h2>
 
 
  <div id="tscore">
@@ -84,11 +80,11 @@ color: whitesmoke;
 
         <div id="words" class="justify-content-center">
             <div class="row">
-        <div class="col-12 text-center">
-            <div id="box" class="text-center p-2">
+        <div class="text-center m-auto">
+            <div id="box" class="form-group text-center p-2">
             <h5>Type The following:</h5>
             <h1 id="display"></h1>
-            <input type="text" id="text" placeholder="Type the word here......">
+            <input type="text" class="form-control text-center" id="text" placeholder="Type the word here......">
         </div>
         <button id="startbtn" class="btn btn-lg btn-outline-success">Start</button>
     </div>
@@ -102,7 +98,8 @@ color: whitesmoke;
 
 
 
-
+</div>
+</div>
  </div>
 </div>   
 </body>

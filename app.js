@@ -22,11 +22,10 @@ function eventListener (){
 //initing time word and score 
 let randomWord;
 
-let score = 0;
 
 let time = 11;
 
-// Set difficulty to value in ls or Beginner
+// Set difficulty to value in local storage
 let difficulty =
   localStorage.getItem('difficulty') !== null
    ? localStorage.getItem('difficulty')
@@ -42,7 +41,16 @@ level.value =
 
 
     // setting  up the JSON
-    const words = ["one","Day","you","tip","Ate","ion","ace","man","ice","art","end","her","car","seven","world","about","again","heart","pizza","water","happy","sixty","board","month","Angel","death","green","music","fifty","three","party","piano","Kelly","mouth","woman","sugar","amber","dream","apple","laugh","tiger","faith","earth","river","money","peace","forty","words","absolute","abstract","accepted","academic","accepted","accident","accuracy","accurate","achieved","acquired","activity","actually","addition","adequate","adjacent","adjusted","advanced","advisory","advocate","affected","aircraft","alliance","although","aluminum","analysis","announce","anything","anywhere","apparent","appendix","approach","approval","argument","artistic","assembly","assuming","athletic","attached","attitude","attorney","audience","autonomy","aviation","bachelor","bacteria","baseball","bathroom","becoming","benjamin","birthday","boundary","breaking","breeding","building","bulletin","business","calendar","campaign","capacity","casualty","catching","category","Catholic","cautious","cellular","ceremony","chairman","champion","chemical","children","circular","civilian","clearing","clinical","clothing","collapse","colonial","colorful","commence","commerce","complain","complete","composed","compound","comprise","computer","conclude","concrete","conflict","confused","congress","consider","constant","consumer","continue","contract","contrary","contrast","convince","corridor","coverage","covering","creation","creative","criminal","critical","crossing","cultural","currency","customer","database","daughter","daylight","deadline","deciding","decision","decrease","deferred","definite","delicate","delivery","describe","designer","detailed","diabetes","dialogue","diameter","directly","director","disabled","disaster","disclose","discount","discover","disorder","disposal","distance","distinct","district","dividend","division","doctrine","document","domestic","dominant","dominate","doubtful","dramatic","dressing","dropping","duration","dynamics","earnings","economic","educated","efficacy","eighteen","election","electric","eligible","emerging","emphasis","employee","endeavor","engaging","engineer","enormous","entirely","entrance","envelope","equality","equation","estimate","evaluate","eventual","everyday","everyone","evidence","exchange","exciting","exercise","explicit","exposure","extended","external","facility","familiar","featured","feedback","festival","fireboard","identical","chocolate","Christmas","beautiful","happiness","Wednesday","challenge","celebrate","adventure","important","consonant","Christian","dangerous","masculine","Australia","irregular","something","knowledge","Elizabeth","macaronic","pollution","President","wrestling","pineapple","adjective","secretary","undefined","Halloween","Amerindic","ambulance","alligator","seventeen","affection","equality","familiar","featured","feedback","festival","fireboard","identical","chocolate","Christmas","beautiful","curiosity","Louisiana","celebrity","Delicious","turquoise","attention","companion","elocution","whimsical","difficult","agitation","accomplishments","unprepossessing","acknowledgeable","Americanization","acknowledgement","prognostication","antepenultimate","acclimatization","maneuverability","rationalisation","bioluminescence","atherosclerosis","syllabification","mischievousness","parthenogenesis","acclimatisation","discombobulated","trustworthiness","carnivorousness","Armadillidiidae","serviceableness","reapportionment","masculinisation","plenipotentiary","interreflection","hemochromatosis","agriculturalist","hospitalization","disadvantageous","therapeutically","anthropomorphic","hypoproteinemia","demagnetisation","nearsightedness","synchronization","Mastigomycotina","levelheadedness","lightheadedness","forthcomingness","desensitization","disorganisation"];
+    const words = ["one","Day","you","tip","Ate","ion","ace","man","ice","art","end","her",
+    "car","seven","world","about","again","heart","pizza","water","happy","sixty","board","month","Angel",
+    "death","green","music","fifty","three","party","piano","Kelly","mouth","woman","sugar","amber","dream","apple",
+    "laugh","tiger","faith","earth","river","money","peace","forty","words","absolute","abstract","accepted","academic","accepted",
+    "accident","accuracy","accurate","achieved","acquired","activity","actually","addition","adequate","adjacent","adjusted","advanced",
+    "advisory","advocate","affected","aircraft","alliance","although","aluminum","analysis","announce","anything","anywhere","apparent",
+    "appendix","approach","approval","argument","artistic","assembly","assuming","athletic","attached","attitude","attorney","audience",
+    "autonomy","aviation","bachelor","bacteria","baseball","bathroom","becoming","benjamin","birthday","boundary","breaking","breeding",
+    "building","bulletin","business","calendar","campaign","capacity","casualty","catching","category","Catholic","cautious","cellular",
+    "ceremony","chairman","champion","chemical","children","circular","civilian","clearing","clinical","clothing","collapse","colonial","colorful","commence","commerce","complain","complete","composed","compound","comprise","computer","conclude","concrete","conflict","confused","congress","consider","constant","consumer","continue","contract","contrary","contrast","convince","corridor","coverage","covering","creation","creative","criminal","critical","crossing","cultural","currency","customer","database","daughter","daylight","deadline","deciding","decision","decrease","deferred","definite","delicate","delivery","describe","designer","detailed","diabetes","dialogue","diameter","directly","director","disabled","disaster","disclose","discount","discover","disorder","disposal","distance","distinct","district","dividend","division","doctrine","document","domestic","dominant","dominate","doubtful","dramatic","dressing","dropping","duration","dynamics","earnings","economic","educated","efficacy","eighteen","election","electric","eligible","emerging","emphasis","employee","endeavor","engaging","engineer","enormous","entirely","entrance","envelope","equality","equation","estimate","evaluate","eventual","everyday","everyone","evidence","exchange","exciting","exercise","explicit","exposure","extended","external","facility","familiar","featured","feedback","festival","fireboard","identical","chocolate","Christmas","beautiful","happiness","Wednesday","challenge","celebrate","adventure","important","consonant","Christian","dangerous","masculine","Australia","irregular","something","knowledge","Elizabeth","macaronic","pollution","President","wrestling","pineapple","adjective","secretary","undefined","Halloween","Amerindic","ambulance","alligator","seventeen","affection","equality","familiar","featured","feedback","festival","fireboard","identical","chocolate","Christmas","beautiful","curiosity","Louisiana","celebrity","Delicious","turquoise","attention","companion","elocution","whimsical","difficult","agitation","accomplishments","unprepossessing","acknowledgeable","Americanization","acknowledgement","prognostication","antepenultimate","acclimatization","maneuverability","rationalisation","bioluminescence","atherosclerosis","syllabification","mischievousness","parthenogenesis","acclimatisation","discombobulated","trustworthiness","carnivorousness","Armadillidiidae","serviceableness","reapportionment","masculinisation","plenipotentiary","interreflection","hemochromatosis","agriculturalist","hospitalization","disadvantageous","therapeutically","anthropomorphic","hypoproteinemia","demagnetisation","nearsightedness","synchronization","Mastigomycotina","levelheadedness","lightheadedness","forthcomingness","desensitization","disorganisation"];
     
 // Generate random word from array
 function getRandomWord() {
@@ -77,6 +85,10 @@ function tScore(){
 
 
 }
+
+
+let score = 0;
+
 
 function updatescore(){
   score++
@@ -120,7 +132,7 @@ function updateTime(){
 function answers(e){
 const insertedText = e.target.value;
 
-if(insertedText === randomWord){
+if( insertedText === randomWord){
   addWordToDOM();
   updatescore();
   e.target.value = '';
@@ -133,7 +145,7 @@ if(insertedText === randomWord){
   else if (difficulty === 'Intermediate' ){
     time+= 4
   }
-  else{
+  else if(difficulty === 'Beginner'){
 
     time+= 5
 
@@ -143,8 +155,8 @@ if(insertedText === randomWord){
 
 }
 
-  
-document.querySelector('form').addEventListener("change", e => {
+document.querySelector('select').addEventListener("change", e => {
+
   difficulty = e.target.value;
   localStorage.setItem('difficulty', difficulty);
 
