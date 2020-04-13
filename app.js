@@ -63,7 +63,7 @@ function getRandomWord() {
 function addWordToDOM() {
 randomWord = getRandomWord();
 
-disPlay.innerHTML = randomWord;
+disPlay.innerHTML = randomWord.toLocaleLowerCase();
 
 }
 
@@ -132,7 +132,7 @@ function updateTime(){
 function answers(e){
 const insertedText = e.target.value;
 
-if( insertedText === randomWord){
+if( insertedText.toLocaleLowerCase() === randomWord.toLocaleLowerCase()){
   addWordToDOM();
   updatescore();
   e.target.value = '';
@@ -155,7 +155,7 @@ if( insertedText === randomWord){
 
 }
 
-document.querySelector('select').addEventListener("change", e => {
+document.querySelector('form').addEventListener("change", e => {
 
   difficulty = e.target.value;
   localStorage.setItem('difficulty', difficulty);
