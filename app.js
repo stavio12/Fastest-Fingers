@@ -143,11 +143,11 @@ if( insertedText === randomWord){
 
   }
   else if (difficulty === 'Intermediate' ){
-    time+= 4
+    time+= 6
   }
   else if(difficulty === 'Beginner'){
 
-    time+= 5
+    time+= 9
 
   }
 
