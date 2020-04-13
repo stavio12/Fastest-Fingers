@@ -1,6 +1,6 @@
 # https://stavio12.github.io/Fastest-Typer/.
 # How fast can you type?
-# Fastest Typer
+# Fastest Fingers
 # 90% done
  Typing Game
  This is the New Mavis Becon...
