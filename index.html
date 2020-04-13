@@ -4,52 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+    <title> Fastest Fingers </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+       <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+ 
 </head>
+
+<style>
+body{
+    background: linear-gradient( 178.6deg,  rgba(20,36,50,1) 100%, rgba(124,143,161,1) 83.8% );
+    color: whitesmoke;
+}
+
+
+    #game{
+position: relative;
+left: 5.5em;
+width: 70vw;
+height: 55vh;
+margin-top: 5em;
+border: .2em solid whitesmoke;
+color: whitesmoke;
+}
+
+#box{
+    display: none;
+    top:0;
+    padding:0;
+    margin-top:0;
+}
+
+#level{
+    color: whitesmoke;
+}
+
+</style>
+
 <body>
-    <form action="#">
-        <div class="d-flex justify-content-center"  id="level">Select Difficulty <select value="level">
+   
+ <div class="container">
+     
+ <form action="#" id="level">
+        <div class="text-center level" >Select Difficulty 
+            <select value="level">
             <option value="Beginner">Beginner</option>
             <option value="Intermediate">Intermediate</option>
             <option value="Expert">Expert</option>
-        </select></div>
+        </select>
+    </div>    
     </form>
 
-
- <div id="game" class="container">
-         <div  class="d-flex justify-content-center" id="header">
-            <img class="img-fluid.max-width: 100%; float-left" src="typing.gif" alt="typing">
-                   Fastest Typer Game
-            <img class="rounded float-right" src="ladytyping.gif" alt="typing">
+<div id="game" class="ml-2">
+ <div  class="row text-center p-2">
+  
+         <div class="p-2 col-12 col-sm-6 col-md-6" id="header">
+            <img class="img-fluid" style="width: 5em;" src="typing.gif" alt="typing">
          </div>
+        <div class="col-12 col-sm-6 col-md-6">
+            <img class="img-fluid" style="width: 5em;" src="ladytyping.gif" alt="typing">
+         </div>
+ </div>
 
-     <div id="tscore" >
-         <h2 class="float-sm-left" id="time">
-         </h2>
-         <h2 class="float-sm-right" id="score">
-        </h2>
-     </div>
+ <h2 class="text-center">Fastest Fingers Game</h2>
 
-        <div id="words" class="d-flex justify-content">
-            <button id="startbtn" class="btn btn-outline-success">Start</button>
-            <div>
-            <h5 style="margin-left: 2em;" >Type The following:</h5>
-            <h1 style="margin-left: 1em;" id="display"></h1>
-            <input type="text" id="text" placeholder="Type the word here......" style="width: 25em; margin-left: -5em;">
-        </div>
-            
+
+ <div id="tscore">
+<div class="row  text-center p-5">
+        <div class="col-12 col-md-6 col-lg-6">
+         <h2 id="time"> </h2>
         </div>
 
-
-    <div id="start"  class="d-flex justify-content">
-        
-        
+        <div class="col-12 col-md-6 col-lg-6">
+         <h2 id="score"> </h2>
     </div>
+    </div>
+</div>
+
+
+        <div id="words" class="justify-content-center">
+            <div class="row">
+        <div class="col-12 text-center">
+            <div id="box" class="text-center p-2">
+            <h5>Type The following:</h5>
+            <h1 id="display"></h1>
+            <input type="text" id="text" placeholder="Type the word here......">
+        </div>
+        <button id="startbtn" class="btn btn-lg btn-outline-success">Start</button>
+    </div>
+</div>
+
+    <div class="text-center p-2">
+    <div id="start"></div>
+</div>
+
+</div>
+
+
+
 
  </div>
+</div>   
 </body>
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./bootstrap.bundle.min.js"></script>
 <script src="app.js"></script>
+
 </html>

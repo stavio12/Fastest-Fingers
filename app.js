@@ -91,7 +91,7 @@ function disappear(){
 
 
   startBtn.style.display = "none";
-  const words = document.querySelector('#words div');
+  const words = document.querySelector('#box');
   words.style.display = 'block';
   addWordToDOM();
    tScore();
@@ -106,15 +106,13 @@ function disappear(){
 function updateTime(){
   document.querySelector('#tscore').style.display = 'none';
   startBtn.style.display = "none";
-  const words = document.querySelector('#words div');
+  const words = document.querySelector('#box');
   words.style.display = 'none';
 
   document.querySelector('#start').innerHTML = `
-  <div>
             <h1>Time run out</h1> <br>
         <h5 id="result">Your final score is ${score}</h5> 
         <button onclick="location.reload()" id="reload" class="btn btn-outline-primary">Reload</button>
-        </div>
   ` 
 
 }

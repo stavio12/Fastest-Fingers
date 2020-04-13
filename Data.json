@@ -1,6 +1,5 @@
 [
-    {
-      "Beginner": [
+    
         "one",
         "Day",
         "you",
@@ -48,13 +47,8 @@
         "money",
         "peace",
         "forty",
-        "words"
-      ],
-
-
-
-
-      "Intermediate": [
+        "words",
+    
         "absolute",
         "abstract",
         "accepted",
@@ -278,13 +272,12 @@
         "ambulance",
         "alligator",
         "seventeen",
-        "affection"
-      ],
+        "affection",
 
 
 
 
-      "Expert": [
+    
         "equality",
         "familiar",
         "featured",
@@ -347,8 +340,7 @@
         "forthcomingness",
         "desensitization",
         "disorganisation"
-      ]
-    }
+     
 
 
 
