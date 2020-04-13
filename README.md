@@ -1,7 +1,7 @@
 # https://stavio12.github.io/Fastest-Fingers/
 # How fast can you type?
 # Fastest Fingers
-# 90% done
+# Original Version from https://github.com/bradtraversy/vanillawebprojects/tree/master/typing-game
  Typing Game
  This is the New Mavis Becon...
 #  Try your hands on this game to test your typing Speed
