@@ -63,7 +63,7 @@ function getRandomWord() {
 function addWordToDOM() {
 randomWord = getRandomWord();
 
-disPlay.innerHTML = randomWord.toLocaleLowerCase();
+disPlay.innerHTML = randomWord;
 
 }
 
@@ -132,7 +132,7 @@ function updateTime(){
 function answers(e){
 const insertedText = e.target.value;
 
-if( insertedText.toLocaleLowerCase() === randomWord.toLocaleLowerCase()){
+if( insertedText === randomWord){
   addWordToDOM();
   updatescore();
   e.target.value = '';
@@ -140,14 +140,14 @@ if( insertedText.toLocaleLowerCase() === randomWord.toLocaleLowerCase()){
 
   if(difficulty === 'Expert'){
     time += 3
-
+  
   }
   else if (difficulty === 'Intermediate' ){
-    time+= 6
+    time+= 5
   }
   else if(difficulty === 'Beginner'){
 
-    time+= 9
+    time+= 7
 
   }
 
